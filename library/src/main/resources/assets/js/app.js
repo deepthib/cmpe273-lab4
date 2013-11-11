@@ -1,4 +1,3 @@
-
 $(":button").click(function() {
     var isbn = this.id;
     alert('About to report lost on ISBN ' + isbn);
@@ -7,9 +6,9 @@ $(":button").click(function() {
   	  type: 'PUT',
   	  success: function(data) {
   	    alert('updated status for isbn '+isbn+' to lost');
-  	    
+  	    $('#st_'+isbn).html("lost");
+  	$('#'+isbn).prop("disabled",true);
   	  }
   	});
-    this.disabled=true;
 });
 
